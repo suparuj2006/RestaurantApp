@@ -11,6 +11,14 @@ namespace RestaurantApp
         static void Main(string[] args)
         {
             Console.WriteLine("Hello TIT.1/1");
+
         }
+    }
+    class Restaurant
+    {
+        private float ID { get; set; }
+        private string Name { get; set; }
+        private string Type { get; set; }
+        private int Rating { get; set; }
     }
 }
