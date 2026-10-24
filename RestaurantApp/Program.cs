@@ -16,9 +16,17 @@ namespace RestaurantApp
     }
     class Restaurant
     {
-        private float ID { get; set; }
+        private int ID { get; set; }
         private string Name { get; set; }
         private string Type { get; set; }
-        private int Rating { get; set; }
+        private double Rating { get; set; }
+
+        public Restaurant(int ID,string Name,string Type,double Rating)
+        {
+            this .ID = ID;
+            this .Name = Name;
+            this .Type = Type;
+            this .Rating = Rating;
+        }
     }
 }
