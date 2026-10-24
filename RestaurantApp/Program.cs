@@ -11,15 +11,25 @@ namespace RestaurantApp
         static void Main(string[] args)
         {
             Console.WriteLine("Hello TIT.1/1");
+            List<Restaurant> restaurants = new List<Restaurant>
+            {
+                new Restaurant(1,"Quanjude Roast Duck", "Beijing Cuisine", 4.5),
+                new Restaurant(2, "Donglaishun Hot Pot", "Hot Pot", 4.6),
+                new Restaurant(3, "Din Tai Fung", "Taiwanese Cuisune",4.7)
+            };
+            foreach (var item in restaurants)
+            {
+                Console.WriteLine($"{item.ID}. {item.Name} ({item.Type}) - Rating: {item.Rating}");
+            }
 
         }
     }
     class Restaurant
     {
-        private int ID { get; set; }
-        private string Name { get; set; }
-        private string Type { get; set; }
-        private double Rating { get; set; }
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public string Type { get; set; }
+        public double Rating { get; set; }
 
         public Restaurant(int ID,string Name,string Type,double Rating)
         {
